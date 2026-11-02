@@ -1,23 +1,26 @@
 .news__item {
     display: flex;
     flex-direction: column;
-    margin: 1rem auto;
-    margin-bottom: 1.6%;
+    width: min(100%, 900px);
+    margin: 1rem auto 1.5rem;
     background: #fff;
-    color: #333;
+    color: #19252b;
     line-height: 1.4;
     font-family: Arial, sans-serif;
-    border-radius: 5px;
+    border: 1px solid #e5e1d8;
+    border-radius: 8px;
     overflow: hidden;
+    box-shadow: 0 8px 26px rgb(16 24 32 / 6%);
 }
 
 .news__item:hover .news__meta-photo {
-    transform: scale(1.3) rotate(3deg);
+    transform: scale(1.05);
 }
 
 .news__item .news__meta {
     position: relative;
-    height: 200px;
+    min-height: 190px;
+    overflow: hidden;
 }
 
 .news__item .news__meta-photo {
@@ -28,7 +31,8 @@
     left: 0;
     background-size: cover;
     background-position: center;
-    transition: transform 0.2s;
+    background-color: #183143;
+    transition: transform 0.35s;
 }
 
 .news__item .news__meta-details,
@@ -53,7 +57,7 @@
 }
 
 .news__item .news__description {
-    padding: 1rem;
+    padding: clamp(1rem, 3vw, 1.6rem);
     background: #fff;
     position: relative;
     z-index: 1;
@@ -62,14 +66,15 @@
 .news__item .news__description h2 {
     line-height: 1;
     margin: 0;
-    font-size: 1.7rem;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.35rem, 3vw, 1.8rem);
 }
 
 .news__item .news__description h3 {
     font-size: 1rem;
     font-weight: 300;
     text-transform: uppercase;
-    color: #a2a2a2;
+    color: #7d817f;
     margin-top: 5px;
 }
 
@@ -78,7 +83,7 @@
 }
 
 .news__item .news__description .news__read-more a {
-    color: #5ad67d;
+    color: #926b35;
     display: inline-block;
     position: relative;
     text-decoration: none;
@@ -111,7 +116,7 @@
     content: '';
     position: absolute;
     height: 5px;
-    background: #5ad67d;
+    background: #ca9b5b;
     width: 35px;
     top: -0.75rem;
     border-radius: 3px;
@@ -124,12 +129,12 @@
 @media (min-width: 640px) {
     .news__item {
         flex-direction: row;
-        max-width: 700px;
+        min-height: 260px;
     }
 
     .news__item .news__meta {
         flex-basis: 40%;
-        height: auto;
+        min-height: 260px;
     }
 
     .news__item .news__description {
@@ -162,5 +167,12 @@
 
     .news__item.alt .news__meta-details {
         padding-left: 25px;
+    }
+}
+
+@media (max-width: 380px) {
+    .news__item .news__meta {
+        height: 160px;
+        min-height: 160px;
     }
 }

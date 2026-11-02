@@ -1,35 +1,126 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-width: 320px;
+    background: #f4f2ed;
+}
+
 body {
-    color: #fff;
-    background: #17181c;
-    font-family: sans-serif;
+    margin: 0;
+    color: #19252b;
+    background: #f4f2ed;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
-    padding: 10px 30px;
+    padding: clamp(2.5rem, 8vw, 7rem) max(1.25rem, calc((100vw - 1200px) / 2));
+    color: #f4f2ed;
+    background: #101820;
+}
+
+.header__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.eyebrow,
+.section-label {
+    margin: 0;
+    color: #ca9b5b;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
 }
 
 header h1 {
-    font-size: 40px;
-    font-weight: 800;
+    margin: 0.7rem 0 0;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(2.8rem, 9vw, 6.5rem);
+    font-weight: 400;
+    letter-spacing: -0.06em;
+    line-height: 0.98;
+}
+
+header h1 span {
+    color: #ca9b5b;
+}
+
+.header__description {
+    max-width: 28rem;
+    margin: 1.25rem 0 0;
+    color: #c3c9c8;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    line-height: 1.6;
+}
+
+main {
+    width: min(100% - 2rem, 1200px);
+    margin: 0 auto;
+}
+
+.sources-section {
+    padding: 2rem 0 1.25rem;
+}
+
+.section-label {
+    margin-bottom: 0.5rem;
+    color: #7d6546;
+}
+
+.news-section {
+    padding: 1.25rem 0 3rem;
 }
 
 footer {
-    height: 100px;
     display: flex;
+    min-height: 100px;
+    flex-wrap: wrap;
+    gap: 0.75rem 2rem;
     align-items: center;
     justify-content: center;
-}
-footer .copyright {
-    font-size: 14px;
-    color: #333;
+    padding: 1.5rem 1rem;
+    color: #c3c9c8;
+    background: #101820;
     text-align: center;
 }
+
+footer .copyright {
+    margin: 0;
+    font-size: 14px;
+}
+
 footer .copyright a {
-    color: #444;
+    color: #f4f2ed;
 }
+
+.footer__author {
+    color: #f4f2ed;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.footer__author:hover,
 footer .copyright a:hover {
-    color: #555;
+    color: #ca9b5b;
 }
-footer .copyright:before {
-    content: '©';
+
+.footer__course {
+    display: inline-flex;
+    align-items: center;
+}
+
+.footer__course img {
+    display: block;
+    width: 48px;
+    max-height: 40px;
+}
+
+@media (max-width: 480px) {
+    footer {
+        flex-direction: column;
+        gap: 0.6rem;
+    }
 }
