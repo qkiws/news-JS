@@ -2,46 +2,28 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="The latest headlines from trusted news sources around the world." />
-        <meta name="theme-color" content="#101820" />
-        <title>Daily Dispatch — News</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>NewsPortal</title>
     </head>
     <body>
         <header>
-            <div class="header__inner">
-                <p class="eyebrow">Independent headlines, updated daily</p>
-                <h1>Daily <span>Dispatch</span></h1>
-                <p class="header__description">A clear view of what's happening around the world.</p>
-            </div>
+            <h1>News Portal</h1>
         </header>
         <main>
-            <section class="sources-section" aria-label="Choose a news source">
-                <p class="section-label">Explore sources</p>
-                <div class="sources buttons" aria-label="News sources"></div>
-            </section>
-            <section class="news-section" aria-label="Latest news">
-                <p class="section-label">Latest stories</p>
-                <div class="news" aria-live="polite"></div>
-            </section>
+            <div class="sources buttons"></div>
+            <div class="news"></div>
         </main>
         <footer>
-            <p class="copyright">News data by <a href="https://newsapi.org/">NewsAPI</a></p>
-            <a class="footer__author" href="https://github.com/qkiws" target="_blank" rel="noopener noreferrer">
-                Built by qkiws · © 2026
-            </a>
-            <a class="footer__course" href="https://rs.school/courses/javascript" target="_blank" rel="noopener noreferrer">
-                <img
-                    src="https://rs.school/_next/static/media/rss-logo.c19ce1b4.svg"
-                    alt="RS School JavaScript course"
-                />
-            </a>
+            <p class="copyright">
+                Copyright <a href="https://newsapi.org">NewsAPI</a>
+            </p>
         </footer>
 
         <template id="sourceItemTemp">
-            <button class="source__item" type="button">
+            <div class="source__item">
                 <span class="source__item-name"></span>
-            </button>
+            </div>
         </template>
 
         <template id="newsItemTemp">
