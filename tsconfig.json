@@ -1,7 +1,6 @@
 {
     "compilerOptions": {
         "target": "ES2019",
-        "outDir" : "./dist",
         "module": "ESNext",
         "moduleResolution": "Bundler",
         "types": ["node"],
